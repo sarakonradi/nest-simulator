@@ -19,8 +19,10 @@
 # You should have received a copy of the GNU General Public License
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
-"""Use evolution strategies to find parameters for a random balanced network (alpha synapses)
------------------------------------------------------------------------------------------------------
+"""
+
+Use evolution strategies to find parameters for a random balanced network (alpha synapses)
+------------------------------------------------------------------------------------------
 
 This script uses an optimization algorithm to find the appropriate
 parameter values for the external drive "eta" and the relative ratio
@@ -55,7 +57,7 @@ Wierstra et al. [2]_.
 
 
 References
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 .. [1] Brunel N (2000). Dynamics of Sparsely Connected Networks of
        Excitatory and Inhibitory Spiking Neurons. Journal of Computational
@@ -65,7 +67,7 @@ References
        Machine Learning Research, 15(1), 949-980.
 
 See Also
-~~~~~~~~~~
+~~~~~~~~
 
 :doc:`brunel_alpha_nest`
 
@@ -73,6 +75,7 @@ Authors
 ~~~~~~~
 
 Jakob Jordan
+
 """
 
 from __future__ import print_function

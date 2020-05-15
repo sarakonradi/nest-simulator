@@ -19,17 +19,18 @@
 # You should have received a copy of the GNU General Public License
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
-"""Two neuron example
-----------------------------
+"""
+
+Two neuron example
+------------------
 
 
 See Also
-~~~~~~~~~~
+~~~~~~~~
 
 :doc:`one_neuron`
 
 """
-
 
 import nest
 import nest.voltage_trace

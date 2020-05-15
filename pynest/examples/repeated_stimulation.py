@@ -20,6 +20,7 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+
 Repeated Stimulation
 --------------------
 
@@ -38,7 +39,6 @@ simulation time at the beginning of each trial. Start and stop are interpreted
 relative to the ``origin``.
 
 """
-
 
 ###############################################################################
 # First, the modules needed for simulation and analyis are imported.

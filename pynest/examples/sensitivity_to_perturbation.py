@@ -20,6 +20,7 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+
 Sensitivity to perturbation
 ---------------------------
 
@@ -30,16 +31,15 @@ and inhibitory neurons. Its activity is driven by an external Poisson input
 provided to all neurons independently. In order to ensure that the network is
 reset appropriately between the trials, we do the following steps:
 
-- resetting the network
-- resetting the random network generator
-- resetting the internal clock
-- deleting all entries in the spike detector
-- introducing a hyperpolarisation phase between the trials
+* Resetting the network
+* Resetting the random network generator
+* Resetting the internal clock
+* Deleting all entries in the spike detector
+* Introducing a hyperpolarisation phase between the trials
   (in order to avoid that spikes remaining in the NEST memory
   after the first simulation are fed into the second simulation)
 
 """
-
 
 ###############################################################################
 # Importing all necessary modules for simulation, analysis and plotting.

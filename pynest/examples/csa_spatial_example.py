@@ -20,6 +20,7 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+
 Using CSA with spatial populations
 ----------------------------------
 
@@ -31,16 +32,17 @@ Using the CSA requires NEST to be compiled with support for
 libneurosim [1]_.
 
 See Also
-~~~~~~~~~
+~~~~~~~~
 
 :doc:`csa_example`
 
 References
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 .. [1] Djurfeldt M, Davison AP and Eppler JM (2014). Efficient generation of connectivity in neuronal networks
        from simulator-independent descriptions. Front. Neuroinform.
        http://dx.doi.org/10.3389/fninf.2014.00043
+
 """
 
 ###############################################################################

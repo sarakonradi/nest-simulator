@@ -19,8 +19,10 @@
 # You should have received a copy of the GNU General Public License
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
-"""Using CSA for connection setup
-------------------------------------
+"""
+
+Using CSA for connection setup
+------------------------------
 
 This example sets up a simple network in NEST using the Connection Set
 Algebra (CSA) instead of using the built-in connection routines.
@@ -29,12 +31,12 @@ Using the CSA requires NEST to be compiled with support for
 libneurosim. For details, see [1]_.
 
 See Also
-~~~~~~~~~~
+~~~~~~~~
 
 :doc:`csa_topology_example`
 
 References
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 .. [1] Djurfeldt M, Davison AP and Eppler JM (2014). Efficient generation of
        connectivity in neuronal networks from simulator-independent

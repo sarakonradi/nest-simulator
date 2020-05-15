@@ -20,6 +20,7 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+
 Multi-compartment neuron example
 --------------------------------
 
@@ -28,9 +29,9 @@ neuron model.
 
 Three stimulation paradigms are illustrated:
 
- - externally applied current, one compartment at a time
- - spikes impinging on each compartment, one at a time
- - rheobase current injected to soma causing output spikes
+* externally applied current, one compartment at a time
+* spikes impinging on each compartment, one at a time
+* rheobase current injected to soma causing output spikes
 
 Voltage and synaptic conductance traces are shown for all compartments.
 

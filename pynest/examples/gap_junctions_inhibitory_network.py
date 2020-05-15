@@ -19,8 +19,10 @@
 # You should have received a copy of the GNU General Public License
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
-"""Gap Junctions: Inhibitory network example
------------------------------------------------
+"""
+
+Gap Junctions: Inhibitory network example
+-----------------------------------------
 
 This script simulates an inhibitory network of 500 Hodgkin-Huxley neurons.
 Without the gap junctions (meaning for ``gap_weight = 0.0``) the network shows
@@ -37,11 +39,12 @@ This example is also used as test case 2 (see Figure 9 and 10)
 in [1]_.
 
 References
-~~~~~~~~~~~
+~~~~~~~~~~
 
 .. [1] Hahne et al. (2015) A unified framework for spiking and gap-junction
        interactions in distributed neuronal network simulations, Front.
        Neuroinform. http://dx.doi.org/10.3389/neuro.11.012.2008
+
 """
 
 import nest

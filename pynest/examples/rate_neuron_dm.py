@@ -19,8 +19,10 @@
 # You should have received a copy of the GNU General Public License
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
-"""Rate neuron decision making
-------------------------------------
+"""
+
+Rate neuron decision making
+---------------------------
 
 A binary decision is implemented in the form of two rate neurons
 engaging in mutual inhibition.
@@ -32,6 +34,7 @@ The activity of each neuron is recorded using multimeter devices.
 It can be observed how noise as well as the difference in evidence
 affects which neuron exhibits larger activity and hence which
 decision will be made.
+
 """
 
 import nest

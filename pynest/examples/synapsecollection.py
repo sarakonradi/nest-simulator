@@ -20,10 +20,15 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+
+Synapse collection example
+--------------------------
+
 Example script to show some of the possibilities of the SynapseCollection class. We
 connect neurons, and get the SynapseCollection with a GetConnections call. To get
 a better understanding of the connections, we plot the weights between the
 source and targets.
+
 """
 
 import nest

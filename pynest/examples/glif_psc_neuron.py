@@ -20,8 +20,9 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+
 Current-based generalized leaky integrate and fire (GLIF) neuron example
---------------------------------
+------------------------------------------------------------------------
 
 Simple example of how to use the ``glif_psc`` neuron model for
 five different levels of GLIF neurons.
@@ -31,7 +32,6 @@ with externally applied current and spikes impinging
 
 Voltage traces, current traces, threshold traces, and spikes are shown.
 
-KEYWORDS: glif_psc
 """
 
 ##############################################################################

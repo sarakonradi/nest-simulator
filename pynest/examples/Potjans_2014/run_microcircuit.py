@@ -19,8 +19,10 @@
 # You should have received a copy of the GNU General Public License
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
-"""PyNEST Microcircuit: Run Simulation
------------------------------------------
+"""
+
+PyNEST Microcircuit: Run Simulation
+-----------------------------------
 
 This is an example script for running the microcircuit model and generating
 basic plots of the network activity.

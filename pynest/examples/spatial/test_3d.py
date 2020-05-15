@@ -20,10 +20,12 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+
 A spatial network in 3D
--------------------------
+-----------------------
 
 Hans Ekkehard Plesser, UMB
+
 """
 
 import nest

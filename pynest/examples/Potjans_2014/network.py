@@ -19,8 +19,10 @@
 # You should have received a copy of the GNU General Public License
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
-"""PyNEST Microcircuit: Network Class
-----------------------------------------
+"""
+
+PyNEST Microcircuit: Network Class
+----------------------------------
 
 Main file of the microcircuit defining the ``Network`` class with functions to
 build and simulate the network.

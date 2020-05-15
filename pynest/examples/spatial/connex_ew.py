@@ -20,7 +20,9 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+
 NEST spatial example
+--------------------
 
 Create two populations of iaf_psc_alpha neurons on a 30x30 grid with edge_wrap,
 connect with circular mask, flat probability,
@@ -28,6 +30,7 @@ visualize.
 
 BCCN Tutorial @ CNS*09
 Hans Ekkehard Plesser, UMB
+
 """
 
 import matplotlib.pyplot as plt

@@ -20,19 +20,21 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+
 Pulse packet example
 --------------------
 
 This script compares the average and individual membrane potential excursions
 in response to a single pulse packet with an analytically acquired voltage
-trace (see: Diesmann [1]_)
+trace (see [1]_).
+
 A pulse packet is a transient spike volley with a Gaussian rate profile.
 The user can specify the neural parameters, the parameters of the
 pulse-packet and the number of trials.
 
 
 References
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 .. [1] Diesmann M. 2002. Dissertation. Conditions for stable propagation of
        synchronous spiking in cortical neural networks: Single neuron dynamics
@@ -40,7 +42,6 @@ References
        http://d-nb.info/968772781/34.
 
 """
-
 
 ###############################################################################
 # First, we import all necessary modules for simulation, analysis and

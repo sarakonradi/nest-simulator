@@ -21,6 +21,7 @@
 #
 
 """
+
 Sinusoidal poisson generator example
 ------------------------------------
 
@@ -34,7 +35,6 @@ created with different parameters. Part 2 illustrates the effect of
 the ``individual_spike_trains`` switch.
 
 """
-
 
 ###############################################################################
 # We import the modules required to simulate, analyze and plot this example.

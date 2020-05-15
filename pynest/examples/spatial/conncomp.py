@@ -20,6 +20,7 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+
 Create two populations of pyramidal cells and two populations of interneurons
 -----------------------------------------------------------------------------
 
@@ -29,6 +30,7 @@ visualize.
 
 BCCN Tutorial @ CNS*09
 Hans Ekkehard Plesser, UMB
+
 """
 
 import nest

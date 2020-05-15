@@ -19,8 +19,10 @@
 # You should have received a copy of the GNU General Public License
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
-"""Population of GIF neuron model with oscillatory behavior
--------------------------------------------------------------
+"""
+
+Population of GIF neuron model with oscillatory behavior
+--------------------------------------------------------
 
 This script simulates a population of generalized integrate-and-fire (GIF)
 model neurons driven by noise from a group of Poisson generators.
@@ -32,7 +34,7 @@ elements (stc and sfa).
 Population dynamics are visualized by raster plot and as average firing rate.
 
 References
-~~~~~~~~~~~
+~~~~~~~~~~
 
 .. [1] Schwalger T, Degert M, Gerstner W (2017). Towards a theory of cortical columns: From spiking
        neurons to interacting neural populations of finite size. PLoS Comput Biol.
@@ -42,6 +44,7 @@ References
        Gerstner W (2012). Parameter extraction and classification of
        three cortical neuron types reveals two distinct adaptation
        mechanisms. Journal of Neurophysiology. 107(6), pp.1756-1775.
+
 """
 
 ###############################################################################

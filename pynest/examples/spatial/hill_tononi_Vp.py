@@ -20,8 +20,9 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+
 NEST spatial example: A case-based tutorial
-===========================================
+-------------------------------------------
 
 :Author: Hans Ekkehard Plesser
 :Institution: Norwegian University of Life Sciences
@@ -38,7 +39,7 @@ and the elimination of a number of connections, with no changes
 to the weights.
 
 Introduction
--------------
+~~~~~~~~~~~~
 
 This tutorial shows you how to implement a simplified version of the
 Hill-Tononi model of the early visual pathway using NEST. The model
@@ -57,21 +58,21 @@ currently supported by NEST. Simplifications include:
 1. We use the ``iaf_cond_alpha`` neuron model, which is
    simpler than the Hill-Tononi model.
 
-#. As the ``iaf_cond_alpha`` neuron model only supports two
+2. As the ``iaf_cond_alpha`` neuron model only supports two
    synapses (labeled "ex" and "in"), we only include AMPA and
    GABA_A synapses.
 
-#. We ignore the secondary pathway (Ts, Rs, Vs), since it adds just
+3. We ignore the secondary pathway (Ts, Rs, Vs), since it adds just
    more of the same from a technical point of view.
 
-#. Synaptic delays follow a Gaussian distribution in the HT
+4. Synaptic delays follow a Gaussian distribution in the HT
    model. This implies actually a Gaussian distributions clipped at
    some small, non-zero delay, since delays must be
    positive. Currently, there is a bug in the module when using clipped
    Gaussian distribution. We therefore draw delays from a
    uniform distribution.
 
-#. Some further adaptations are given at the appropriate locations in
+5. Some further adaptations are given at the appropriate locations in
    the script.
 
 This tutorial is divided in the following sections:
@@ -103,7 +104,7 @@ Connections_
    section also discusses the setup for recording.
 
 Philosophy
------------
+~~~~~~~~~~
 
 A network models has two essential components: *populations* and
 *projections*.  We first use NEST's ``CopyModel()`` mechanism to
@@ -122,27 +123,28 @@ a significant development in strategies and tools for network
 descriptions in the future. The following contributions to CNS*09
 seem particularly interesting
 
-- Ralf Ansorg & Lars Schwabe. Declarative model description and
+* Ralf Ansorg & Lars Schwabe. Declarative model description and
   code generation for hybrid individual- and population-based
   simulations of the early visual system (P57);
-- Sharon Crook, R. Angus Silver, & Padraig Gleeson. Describing
+* Sharon Crook, R. Angus Silver, & Padraig Gleeson. Describing
   and exchanging models of neurons and neuronal networks with
   NeuroML (F1);
 
 as well as the following paper which will apply in PLoS
 Computational Biology shortly:
 
-- Eilen Nordlie, Marc-Oliver Gewaltig, & Hans Ekkehard Plesser.
+* Eilen Nordlie, Marc-Oliver Gewaltig, & Hans Ekkehard Plesser.
   Towards reproducible descriptions of neuronal network models.
 
 Preparations
--------------
+~~~~~~~~~~~~
 
 Please make sure that your ``PYTHONPATH`` is set correctly, so
 that Python can find the NEST Python module.
 
 **Note:** By default, the script does not show any graphics.
 Set ``SHOW_FIGURES`` to ``True`` to activate graphics.
+
 """
 
 from pprint import pprint

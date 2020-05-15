@@ -20,8 +20,9 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+
 Clopath Rule: Bidirectional connections
------------------------------------------
+---------------------------------------
 
 This script simulates a small network of ten excitatory and three
 inhibitory ``aeif_psc_delta_clopath`` neurons. The neurons are randomly connected
@@ -30,15 +31,17 @@ to the excitatory population and those among the neurons of the network
 are Clopath synapses. The rate of the Poisson generators is modulated with
 a Gaussian profile whose center shifts randomly each 100 ms between ten
 equally spaced positions.
-This setup demonstrates that the Clopath synapse is able to establish
+
+The setup demonstrates that the Clopath synapse is able to establish
 bidirectional connections. The example is adapted from [1]_ (cf. fig. 5).
 
 References
-~~~~~~~~~~~
+~~~~~~~~~~
 
 .. [1] Clopath C, Büsing L, Vasilaki E, Gerstner W (2010). Connectivity reflects coding:
        a model of voltage-based STDP with homeostasis.
        Nature Neuroscience 13:3, 344--352
+
 """
 
 import nest

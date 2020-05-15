@@ -20,12 +20,14 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+
 Connect two populations with convergent projection and rectangular mask, visualize connection from target perspective
------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
 
 Create two populations of iaf_psc_alpha neurons on a 30x30 grid
 BCCN Tutorial @ CNS*09
 Hans Ekkehard Plesser, UMB
+
 """
 
 import nest
