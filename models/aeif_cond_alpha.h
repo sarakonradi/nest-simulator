@@ -87,7 +87,7 @@ adaptive step size to integrate the differential equation.
 
 The membrane potential is given by the following differential equation:
 
-.. math::
+.. math:
 
  C_m \frac{dV}{dt} =
  -g_L(V-E_L)+g_L\Delta_T\exp\left(\frac{V-V_{th}}{\Delta_T}\right) -
