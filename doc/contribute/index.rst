@@ -29,6 +29,11 @@ Contribute a Python example script
 
 If you have a Python example network to contribute, please refer to our :doc:`templates_styleguides/example_template` to ensure you cover the required information.
 
+Additional workflows
+--------------------
+
+You may also be interested in our :doc:`xcode_workflow`.
+
 Have a question?
 ----------------
 
