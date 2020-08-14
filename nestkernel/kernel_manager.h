@@ -50,8 +50,8 @@
 
  Parameters:
  The full list of parameters available in the kernel status dictionary can be
- found <a href="https://nest-simulator.readthedocs.io/en/latest/ref_material/
- pynest_apis.html#nest.lib.hl_api_simulation.SetKernelStatus">here</a>.
+ found [here](https://nest-simulator.readthedocs.io/en/latest/ref_material/
+ pynest_apis.html#nest.lib.hl_api_simulation.SetKernelStatus).
 
  SeeAlso: Simulate, Node
  */
