@@ -41,11 +41,11 @@ called *send.py*.
 
 The sending process is quite straightforward. We import the NEST library
 and set a useful kernel parameter. On line 6, we create two simple
-intergrate-and-fire neuron models, one with a current input of 400mA,
+intergrate-and-fire neuron |models|, one with a current input of 400mA,
 and one with 405mA, just so they will respond differently. If you use
 ipython to work interactively, you can check their current status
 dictionary with ``neurons.get()``. The definitive
-documentation for NEST models is the header file, in this case
+documentation for NEST |models| is the header file, in this case
 ``models/iaf_psc_alpha.h`` in the NEST source.
 
 We create a single ``music_event_out_proxy`` for our
@@ -184,7 +184,7 @@ sent spikes. The delay parameter for the connection from the input
 proxies to the parrot neurons in ``receive.py`` on line 10
 accounts for the delay.
 
-Also — and it may be obvious in a simple model like this — the neuron
+Also — and it may be obvious in a simple |model| like this — the neuron
 IDs on the sending side and the IDs on the receiving side have no fixed
 relationship. The sending neurons have ID 1 and 2, while the recipients
 have 3 and 4. If you need to map events in one simulation to events in
@@ -220,10 +220,10 @@ The start mirrors our earlier receiving example: you create a continuous
 input proxy (a single input in this case) and set the port name.
 
 NEST has no general facility to actually apply continuous-valued inputs
-directly into models. Its neurons deal only with spike events. To use
+directly into |models|. Its neurons deal only with spike events. To use
 the input you need to create a loop on lines 9-13 where you simulate for
 a short period, explicitly read the value on line 11, apply it to the
-simulation model, then simulate for a period again.
+simulation |model|, then simulate for a period again.
 
 People sometimes try to use this pattern to control the rate of a
 Poisson generator from outside the simulation. You get the rate from

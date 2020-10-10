@@ -61,11 +61,11 @@ of the root node by calling
 ``nest.SetKernelStatus("data_prefix", "prefix")`` or setting the
 environment variable ``NEST_DATA_PREFIX``.
 
-Neuron models
+Neuron |models|
 -------------
 
 1. **I cannot see any of the conductance based models. Where are they?**
-   Some neuron model need the GNU Scientific Library (GSL) to work. The
+   Some neuron |model| need the GNU Scientific Library (GSL) to work. The
    conductance based models are among those. If your NEST installation
    does not have these models, you probably have no GSL or GSL
    development packages installed. To solve this problem, install the

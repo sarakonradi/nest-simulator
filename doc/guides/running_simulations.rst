@@ -13,7 +13,7 @@ resolution* (default 0.1ms) and can be set using ``SetKernelStatus``:
 
     SetKernelStatus("resolution", 0.1)
 
-Even though a neuron model can use smaller time steps internally, the
+Even though a neuron |model| can use smaller time steps internally, the
 membrane potential will only be visible to a ``multimeter`` on the
 outside at time points that are multiples of the simulation resolution.
 
@@ -86,7 +86,7 @@ initialization. Thus, we freeze the delay extrema after the first call
 to ``Simulate``. To still allow adding new connections inbetween calls
 to ``Simulate``, the required boundaries of delays can be set manually
 using ``SetKernelStatus`` (Please note that the delay extrema are set as
-properties of the synapse model):
+properties of the synapse |model|):
 
 ::
 
@@ -102,16 +102,16 @@ Spike generation and precision
 
 A neuron fires a spike when the membrane potential is above threshold at
 the end of an update interval (i.e., a multiple of the simulation
-resolution). For most models, the membrane potential is then reset to
+resolution). For most |models|, the membrane potential is then reset to
 some fixed value and clamped to that value during the refractory time.
 This means that the last membrane potential value at the last time step
 before the spike can vary, while the potential right after the step will
-usually be the reset potential (some models may deviate from this). This
+usually be the reset potential (some |models| may deviate from this). This
 also means that the membrane potential recording will never show values
 above the threshold. The time of the spike is always the time at *the
 end of the interval* during which the threshold was crossed.
 
-NEST also has a some models that determine the precise time of the
+NEST also has a some |models| that determine the precise time of the
 threshold crossing during the interval. Please see the documentation on
 :doc:`precise spike time neurons <simulations_with_precise_spike_time>`
 for details about neuron update in continuous time and the
@@ -210,7 +210,7 @@ The progress of the simulation can be monitored by setting:
     SetKernelStatus({"print_time": True})
 
 If enabled, a line is printed to screen at every time step of the simulation to
-track the percentage, the absolute elapsed model time and the real-time factor,
+track the percentage, the absolute elapsed |model| time and the real-time factor,
 for example:
 
 ::
@@ -219,7 +219,7 @@ for example:
 
 The *real-time factor* is defined as the quotient of *wall-clock time* (which
 is also known as real time) and the *model time* (which is the duration by
-which the state of the model is advanced in time, or in short, the argument to
+which the state of the |model| is advanced in time, or in short, the argument to
 the ``Simulate()`` call):
 
 .. math::
@@ -231,7 +231,7 @@ simulation runs slower than the wall-clock time.
 
 In case a simulation script contains multiple ``Simulate()`` calls,
 the percentage simulation time is reset to `0%` at the beginning of each call,
-but the absolute model time and the real-time factor account for the total
+but the absolute |model| time and the real-time factor account for the total
 elapsed times.
 
 The real-time factor should not be confused with the concept of speedup.
@@ -249,5 +249,5 @@ threads or processes):
     For large, distributed simulations, it is recommended to set
     ``{"print_time": False}`` to avoid the overhead of the print calls.
     In these cases, the real-time factor can be computed by measuring the
-    wall-clock time manually and dividing by the set model time.
+    wall-clock time manually and dividing by the set |model| time.
 

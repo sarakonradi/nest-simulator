@@ -19,7 +19,7 @@ Routines <connection-management.md#old-connection-routines>`__.
 The connectivity pattern is defined inside the `Connect()` function
 under the key 'rule'. The patterns available are described in
 `Connection Rules <connection-management.md#connection-rules>`__. In
-addition the synapse model can be specified within the connect function
+addition the synapse |model| can be specified within the connect function
 and all synaptic parameters can be randomly distributed.
 
 The `Connect()` function can be called in either of the following
@@ -50,7 +50,7 @@ vector. Here 'allow_multapses' set to False will result in one potential
 connection between each occurring node pair.
 
 ``syn_spec`` defines the synapse type and its properties. It can be
-given as a string defining the synapse model (default:
+given as a string defining the synapse |model| (default:
 'static_synapse') or as a dictionary. By using the key-word variant
 (``Connect(pre, post, syn_spec=syn_spec_dict)``), the conn_spec can be
 omitted in the call to connect and 'all_to_all' is assumed as the
@@ -217,9 +217,9 @@ Example:
 Specifying the synapse properties in a dictionary allows for distributed
 synaptic parameter. In addition to the key ``model`` the dictionary can
 contain specifications for ``weight``, ``delay``, ``receptor_type`` and
-parameters specific to the chosen synapse model. The specification of
+parameters specific to the chosen synapse |model|. The specification of
 all parameters is optional. Unspecified parameters will use the default
-values determined by the current synapse model. All parameters can be
+values determined by the current synapse |model|. All parameters can be
 scalars, arrays or distributions (specified as dictionaries). One
 synapse dictionary can contain an arbitrary combination of parameter
 types, as long as they agree with the connection routine (``rule``).
@@ -351,7 +351,7 @@ Example
     Connect(A, B, syn_spec=syn_dict)
 
 In this example, the ``all_to_all`` connection rule is applied by
-default, using the `stdp_synapse` model. All synapses are created with
+default, using the `stdp_synapse` |model|. All synapses are created with
 weight 2.5, a delay uniformly distributed in [0.8, 2.5], while the alpha
 parameters is drawn from a normal distribution with mean 5.0 and std.dev
 1.0; values below 0.5 are excluded by re-drawing any values below 0.5.
@@ -391,7 +391,7 @@ Receptor Types
 Each connection in NEST targets a specific receptor type on the
 post-synaptic node. Receptor types are identified by integer numbers,
 the default receptor type is 0. The meaning of the receptor type depends
-on the model and is documented in the model documentation. To connect to
+on the |model| and is documented in the |model| documentation. To connect to
 a non-standard receptor type, the parameter ``receptor_type`` of the
 additional argument ``params`` is used in the call to the ``Connect``
 command. To illustrate the concept of receptor types, we give an example
@@ -427,7 +427,7 @@ post-synaptic node.
 
 The code block above connects a standard integrate-and-fire neuron to a
 somatic excitatory receptor of a multi-compartment integrate-and-fire
-neuron model. The result is illustrated in the figure.
+neuron |model|. The result is illustrated in the figure.
 
 .. _synapse-types:
 
@@ -486,7 +486,7 @@ type and a parameter dictionary as arguments.
 For the creation of custom synapse types from already existing synapse
 types, the command `CopyModel` is used. It has an optional argument
 ``params`` to directly customize it during the copy operation. Otherwise
-the defaults of the copied model are taken.
+the defaults of the copied |model| are taken.
 
 ::
 
@@ -495,7 +495,7 @@ the defaults of the copied model are taken.
 
 **Note**: Not all nodes can be connected via all available synapse
 types. The events a synapse type is able to transmit is documented in
-the ``Transmits`` section of the model documentation.
+the ``Transmits`` section of the |model| documentation.
 
 Inspecting Connections
 ----------------------
@@ -503,13 +503,13 @@ Inspecting Connections
 ``GetConnections(source=None, target=None, synapse_model=None)``: Return
 an array of identifiers for connections that match the given parameters.
 source and target need to be lists of node IDs, model is a string
-representing a synapse model. If GetConnections is called without
+representing a synapse |model|. If GetConnections is called without
 parameters, all connections in the network are returned. If a list of
 source neurons is given, only connections from these pre-synaptic
 neurons are returned. If a list of target neurons is given, only
 connections to these post-synaptic neurons are returned. If a synapse
 model is given, only connections with this synapse type are returned.
-Any combination of source, target and model parameters is permitted.
+Any combination of source, target and |model| parameters is permitted.
 Each connection id is a 5-tuple or, if available, a NumPy array with the
 following five entries: source-node_id, target-node_id, target-thread,
 synapse-id, port.

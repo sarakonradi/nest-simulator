@@ -7,7 +7,7 @@ neurons. Couldn’t we have connected the spike recorder directly to the
 proxies?
 
 No, we could not. NEST devices are not generally implemented the same
-way as neuron models, and are not designed to be connected directly to
+way as neuron |models|, and are not designed to be connected directly to
 each other. Normal neurons exist only on one node in a distributed
 simulation, but devices such as the spike recorder and the MUSIC event
 handler are usually duplicated aross all nodes.
@@ -56,7 +56,7 @@ applied anywhere along the path from the inputs to the outputs.
 
 The lesson is that you don’t connect two NEST devices to each other
 unless the documentation specifically tells you that you can. Always add
-a layer of neuron models, such as parrot neurons, in between.
+a layer of neuron |models|, such as parrot neurons, in between.
 This is true for devices in general of course, but this connection
 pattern, where you want to record the MUSIC input from another
 simulation, is so common that it’s worth warning about this.

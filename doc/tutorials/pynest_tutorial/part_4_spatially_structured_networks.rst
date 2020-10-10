@@ -27,7 +27,7 @@ subdirectory: ``pynest/examples/``.
 Incorporating structure in networks of point neurons
 ----------------------------------------------------
 
-If we use biologically detailed models of a neuron, then it's easy to
+If we use biologically detailed |models| of a neuron, then it's easy to
 understand and implement the concepts of spatial networks, as we already have
 dendritic arbors, axons, etc. which are the physical prerequisites for
 connectivity within the nervous system. However, we can still get a
@@ -45,7 +45,7 @@ between three types of specificity:
 In the previous sections, we saw that we can create deterministic or
 randomly selected connections between networks using ``Connect()``. Likewise, it is
 also possible to use ``Create()`` and ``Connect()`` to create network
-models that incorporate spatial location and spatial connectivity
+|models| that incorporate spatial location and spatial connectivity
 profiles.
 
 .. note::
@@ -95,8 +95,8 @@ The code for defining nodes with spatial distributions follows this template:
 
 where ``positions`` will define the locations of the elements.
 
-The ``node_model`` is the model type of the neuron, which can either be an
-existing model in the ``NEST`` collection, or one that we've previously
+The ``node_model`` is the |model| type of the neuron, which can either be an
+existing |model| in the ``NEST`` collection, or one that we've previously
 defined using ``CopyModel()``.
 
 We next have to decide whether the nodes should be placed in a
@@ -304,7 +304,7 @@ following table lists the parameters that can be used.
 |                         | | **NB**: like weights, this value overrides any   |                                       |
 |                         | | value currently used by synapse\_model!          |                                       |
 +-------------------------+----------------------------------------------------+---------------------------------------+
-| | synapse_model         | | Define the type of synapse model to be included. | | any synapse model included in       |
+| | synapse_model         | | Define the type of synapse |model| to be included. | | any synapse |model| included in       |
 |                         |                                                    | | ``nest.Models()``, or currently     |
 |                         |                                                    | | user-defined                        |
 +-------------------------+----------------------------------------------------+---------------------------------------+
@@ -360,7 +360,7 @@ was built correctly:
 
 -  ``nest.PrintNodes()``
 
-   which prints the node ID ranges and model names of the nodes in the
+   which prints the node ID ranges and |model| names of the nodes in the
    network.
 
 -  Create plots using the following functions:

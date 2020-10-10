@@ -92,7 +92,7 @@ prompted for.
     dir(nest)
 
 One such command is ``nest.Models()``, which will return a list of all
-the available models you can use. If you want to obtain more information
+the available |models| you can use. If you want to obtain more information
 about a particular command, you may use Python’s standard help system.
 
 This will return the help text (docstring) explaining the use of this
@@ -110,7 +110,7 @@ arranged with spatial structure to build networks distributed in space
 - we will get to this later in the course. For now we
 will work with the default network structure of NEST.
 
-New nodes are created with the command ``Create``, which takes as arguments the model name of the
+New nodes are created with the command ``Create``, which takes as arguments the |model| name of the
 desired node type, and optionally the number of nodes to be created and
 the initialising parameters. The function returns a ``NodeCollection`` of handles to
 the new nodes, which you can assign to a variable for later use. A ``NodeCollection`` is a compact
@@ -145,7 +145,7 @@ to see which properties a neuron has, you may ask it for its status.
 This will print out the corresponding dictionary in the Python console.
 Many of these properties are not relevant for the dynamics of the
 neuron. To find out what the interesting properties are, look at the
-documentation of the model through the helpdesk. If you already know
+documentation of the |model| through the helpdesk. If you already know
 which properties you are interested in, you can specify a key, or a list
 of keys, as an optional argument to ``get``:
 
@@ -194,8 +194,8 @@ directly
 Next we create a ``multimeter``, a *device* we can use to record the
 membrane voltage of a neuron over time. The property ``record_from``
 expects a list of the names of the variables we would like to
-record. The variables exposed to the multimeter vary from model to
-model. For a specific model, you can check the names of the exposed
+record. The variables exposed to the multimeter vary from |model| to
+|model|. For a specific |model|, you can check the names of the exposed
 variables by looking at the neuron’s property ``recordables``.
 
 ::
@@ -322,7 +322,7 @@ multimeter. This does complicate retrieving the information: the data
 for each of the n neurons will be stored and returned in an interleaved
 fashion. Luckily Python provides us with a handy array operation to
 split the data easily: array slicing with a step (sometimes called
-stride). To explain this you have to adapt the model created in the
+stride). To explain this you have to adapt the |model| created in the
 previous part. Save your code under a new name, in the next section you
 will also work on this code. Create an extra neuron with the background
 current given a different value:
@@ -385,8 +385,8 @@ weights can be defined in a dictionary, which is passed to the
 ``Connect`` function using the keyword ``syn_spec`` (synapse
 specifications). In general all parameters determining the synapse can
 be specified in the synapse dictionary, such as ``"weight"``,
-``"delay"``, the synaptic model (``"synapse_model"``) and parameters specific to
-the synaptic model.
+``"delay"``, the synaptic |model| (``"synapse_model"``) and parameters specific to
+the synaptic |model|.
 
 ::
 
@@ -529,14 +529,14 @@ the dictionary.
 Synapse
 ^^^^^^^
 
-The synapse model and its properties can be inserted either as a string
-describing one synapse model (synapse models are listed in the
-synapsedict) or as a dictionary. If no synapse model
-is specified the default model ``"static_synapse"`` will be used.
+The synapse |model| and its properties can be inserted either as a string
+describing one synapse |model| (synapse |models| are listed in the
+synapsedict) or as a dictionary. If no synapse |model|
+is specified the default |model| ``"static_synapse"`` will be used.
 Available keys in the synapse dictionary are ``"synapse_model"``, ``"weight"``,
 ``"delay"``, ``"receptor_type"`` and parameters specific to the chosen
-synapse model. All parameters are optional and if not specified will use
-the default values determined by the current synapse model. ``"synapse_model"``
+synapse |model|. All parameters are optional and if not specified will use
+the default values determined by the current synapse |model|. ``"synapse_|model|"``
 determines the synapse type, taken from pre-defined synapse types in
 NEST or manually specified synapses created via ``CopyModel()``. All
 other parameters can be scalars or distributions. In the case of scalar

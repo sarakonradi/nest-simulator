@@ -4,12 +4,12 @@ Part 3: Connecting networks with synapses
 Introduction
 ------------
 
-In this section we look at using synapse models to connect neurons.
+In this section we look at using synapse |models| to connect neurons.
 After you have worked through this material, you will know how to:
 
--  set synapse model parameters before creation
--  define synapse models with customised parameters
--  use synapse models in connection routines
+-  set synapse |model| parameters before creation
+-  define synapse |models| with customised parameters
+-  use synapse |models| in connection routines
 -  query the synapse values after connection
 -  set synapse values during and after connection
 
@@ -27,14 +27,14 @@ Networks <https://www.nest-simulator.org/more-example-networks/>`__, or
 have a look at at the source directory of your NEST installation in the
 subdirectory: ``pynest/examples/``.
 
-Parameterising synapse models
+Parameterising synapse |models|
 -----------------------------
 
-NEST provides a variety of different synapse models. You can see the
-available models by using the command ``Models(synapses)``, which picks
-only the synapse models out of the list of all available models.
+NEST provides a variety of different synapse |models|. You can see the
+available |models| by using the command ``Models(synapses)``, which picks
+only the synapse |models| out of the list of all available |models|.
 
-Synapse models can be parameterised analogously to neuron models. You
+Synapse |models| can be parameterised analogously to neuron |models|. You
 can discover the default parameter settings using ``GetDefaults(model)``
 and set them with ``SetDefaults(model,params)``:
 
@@ -42,26 +42,26 @@ and set them with ``SetDefaults(model,params)``:
 
     nest.SetDefaults("stdp_synapse",{"tau_plus": 15.0})
 
-Any synapse generated from this model will then have all the standard
+Any synapse generated from this |model| will then have all the standard
 parameters except for the ``tau_plus``, which will have the value given
 above.
 
-Moreover, we can also create customised variants of synapse models using
-``CopyModel()``, exactly as demonstrated for neuron models:
+Moreover, we can also create customised variants of synapse |models| using
+``CopyModel()``, exactly as demonstrated for neuron |models|:
 
 ::
 
     nest.CopyModel("stdp_synapse","layer1_stdp_synapse",{"Wmax": 90.0})
 
 Now ``layer1_stdp_synapse`` will appear in the list returned by
-``Models()``, and can be used anywhere that a built-in model name can be
+``Models()``, and can be used anywhere that a built-in |model| name can be
 used.
 
 STDP synapses
 ~~~~~~~~~~~~~
 
 For the majority of synapses, all of their parameters are accessible via
-``GetDefaults()`` and ``SetDefaults()``. Synapse models implementing
+``GetDefaults()`` and ``SetDefaults()``. Synapse |models| implementing
 spike-timing dependent plasticity are an exception to this, as their
 dynamics are driven by the post-synaptic spike train as well as the
 pre-synaptic one. As a consequence, the time constant of the depressing
@@ -75,10 +75,10 @@ as follows:
 or by using any of the other methods of parameterising neurons
 demonstrated in the first two parts of this introduction.
 
-Connecting with synapse models
+Connecting with synapse |models|
 ------------------------------
 
-The synapse model as well as parameters associated with the synapse type
+The synapse |model| as well as parameters associated with the synapse type
 can be set in the synapse specification dictionary accepted by the
 connection routine.
 
@@ -88,7 +88,7 @@ connection routine.
     syn_dict = {"synapse_model": "stdp_synapse", "alpha": 1.0}
     nest.Connect(epop1, epop2, conn_dict, syn_dict)
 
-If no synapse model is given, connections are made using the model
+If no synapse |model| is given, connections are made using the |model|
 ``static_synapse``.
 
 Distributing synapse parameters
@@ -158,7 +158,7 @@ population by specifying ``target`` as a NodeCollection of one or more nodes:
 
 will return all connections between all neurons in the network and
 neurons in ``epop2``. Finally, the search can be restricted by
-specifying a given synapse model:
+specifying a given synapse |model|:
 
 ::
 
@@ -225,7 +225,7 @@ Numbers and variables
 ~~~~~~~~~~~~~~~~~~~~~
 
 Simulations typically have lots of numbers in them - we use them to set
-parameters for neuron models, to define the strengths of connections,
+parameters for neuron |models|, to define the strengths of connections,
 the length of simulations and so on. Sometimes we want to use the same
 parameters in different scripts, or calculate some parameters based on
 the values of other parameters. It is not recommended to hardwire the
@@ -382,13 +382,13 @@ Querying Synapses
 
    -  ``source`` - NodeCollection of source node IDs
    -  ``target`` - NodeCollection of target node IDs
-   -  ``synapse_model`` - string with the synapse model
+   -  ``synapse_model`` - string with the synapse |model|
 
    If GetConnections is called without parameters, all connections in
    the network are returned. If a NodeCollection of source neurons is given, only
    connections from these pre-synaptic neurons are returned. If a NodeCollection
    of target neurons is given, only connections to these post-synaptic
-   neurons are returned. If a synapse model is given, only connections
+   neurons are returned. If a synapse |model| is given, only connections
    with this synapse type are returned. Any combination of source,
    target and synapse\_model parameters is permitted. Each connection id
    is represented by the following five

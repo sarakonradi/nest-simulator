@@ -79,7 +79,7 @@ Where to find what
 
 * :doc:`Tutorials <tutorials/index>` show you step by step instructions using NEST. If you haven't used NEST before, the PyNEST tutorial is a good place to start.
 
-* :doc:`Example Networks <examples/index>`  demonstrate the use of dozens of the neural network models implemented in NEST.
+* :doc:`Example Networks <examples/index>`  demonstrate the use of dozens of the neural network |models| implemented in NEST.
 
 * :doc:`Topical Guides <guides/index>` provide deeper insight into several topics and concepts from :doc:`Parallel Computing <guides/parallel_computing>` to handling :doc:`Gap Junction Simulations <guides/simulations_with_gap_junctions>` and :doc:`setting up a spatially-structured network <guides/spatial/guide_spatially_structured_networks>`.
 

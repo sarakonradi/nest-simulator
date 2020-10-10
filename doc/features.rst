@@ -55,7 +55,7 @@ General Features
 -  Multi-threading to use multi-processor machines efficiently
 -  MPI-parallelism to use computer clusters and super computers
 
-Neuron models
+Neuron |models|
 -------------
 
 -  Integrate and fire (IAF) neuron models with current based synapses
@@ -63,20 +63,20 @@ Neuron models
 
 -  Integrate and fire neuron models with conductance-based synapses
 
--  Adaptive-exponential integrate and fire neuron model (AdEx) (`Brette
+-  Adaptive-exponential integrate and fire neuron |model| (AdEx) (`Brette
    & Gerstner,
    2005 <http://jn.physiology.org/cgi/content/abstract/94/5/3637>`__)-
    the standard in the FACETS EU project
    (`[1] <http://facets.kip.uni-heidelberg.de/>`__)
 
--  MAT2 neuron model (`Kobayashi et al.
+-  MAT2 neuron |model| (`Kobayashi et al.
    2009 <http://www.frontiersin.org/computational_neuroscience/10.3389/neuro.10/009.2009/abstract>`__)
 
 -  Hodgkin-Huxley type models with one compartment
 
 -  Neuron models with few compartments
 
-Synapse models
+Synapse |models|
 --------------
 
 -  Static synapses
@@ -103,7 +103,7 @@ Interoperability
 Accuracy
 --------
 
--  Each neuron model is assigned an appropriate solver
+-  Each neuron |model| is assigned an appropriate solver
 
 -  `Exact
    Integration <http://www.springerlink.com/content/08legf57tjkc6nj0/>`__

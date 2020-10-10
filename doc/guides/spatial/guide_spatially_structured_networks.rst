@@ -51,7 +51,7 @@ Structurally distributed nodes
 Neuronal networks can have an organized spatial distribution, which we call *layers*. Layers in NEST 3.0
 are NodeCollections with spatial metadata. We will first
 illustrate how to place elements in simple grid-like layers, where each
-element is a single model neuron, before describing how the elements can be placed
+element is a single |model| neuron, before describing how the elements can be placed
 freely in space.
 
 We will illustrate the definition and use of spatially distributed NodeCollections using examples.
@@ -94,7 +94,7 @@ We create a first, grid-based simple NodeCollection with the following command:
 
 The layer is shown in :numref:`fig_layer1`. Note the following properties:
 
--  We are using the standard ``Create`` function, but in addition to model
+-  We are using the standard ``Create`` function, but in addition to |model|
    type, we are also passing a ``nest.spatial.grid`` object as the
    ``positions`` argument.
 
@@ -354,9 +354,9 @@ the shape argument, ``shape=[nx, ny, nz]``:
 Periodic boundary conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Simulations usually model systems much smaller than the biological
+Simulations usually |model| systems much smaller than the biological
 networks we want to study. One problem this entails is that a
-significant proportion of neurons in a model network is close to the
+significant proportion of neurons in a |model| network is close to the
 edges of the network with fewer neighbors than nodes properly inside the
 network. In the :math:`5\times 5`-layer in :numref:`fig_layer1` for instance., 16
 out of 25 nodes form the border of the layer.
@@ -865,7 +865,7 @@ Note the following:
 Probabilistic connection rules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Many neuronal network models employ probabilistic connection rules.
+Many neuronal network |models| employ probabilistic connection rules.
 NEST supports probabilistic connections through the
 ``pairwise_bernoulli`` connection rule. The probability can then be a constant,
 depend on the position of the source or the target neuron, or on the
@@ -1157,7 +1157,7 @@ on the following principles:
 
 In most physical systems simulated using periodic boundary conditions,
 interactions between entities are short-range. Periodic boundary
-conditions are well-defined in such cases. In neuronal network models
+conditions are well-defined in such cases. In neuronal network |models|
 with long-range interactions, periodic boundary conditions may not make
 sense. In general, we recommend to use periodic boundary conditions only
 when connection masks are significantly smaller than the NodeCollections they are
@@ -1174,7 +1174,7 @@ connecting it according to a given probability function. In both cases,
 the number of connections generated depends on mask and connection
 probability.
 
-Many neuron models in the literature, in contrast, prescribe a certain
+Many neuron |models| in the literature, in contrast, prescribe a certain
 *fan in* (number of incoming connections) or *fan out* (number of outgoing
 connections) for each node. You can achieve this in NEST by
 prescribing the number of connections for each driver node by using
@@ -1252,11 +1252,11 @@ number of connections is prescribed.
 
 .. _sec:conn_synapse:
 
-Synapse models and properties
+Synapse |models| and properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By default, ``Connect`` creates connections using the default synapse
-model in NEST, ``static_synapse``. You can specify a different model by
+|model| in NEST, ``static_synapse``. You can specify a different |model| by
 adding a ``'synapse_model'`` entry to the synapse specification
 dictionary, as in this example:
 
@@ -1264,8 +1264,8 @@ dictionary, as in this example:
     :start-after: #{ conn8 #}
     :end-before: #{ end #}
 
-You have to use synapse models if you want to set, e.g., the receptor
-type of connections or parameters for plastic synapse models. These can
+You have to use synapse |models| if you want to set, e.g., the receptor
+type of connections or parameters for plastic synapse |models|. These can
 not be set in distance-dependent ways at present.
 
 .. _sec:dev_subregions:
@@ -1330,7 +1330,7 @@ Query functions
 The following table presents some query functions provided by NEST.
 
 +---------------------------------+-----------------------------------------------------+
-| ``nest.PrintNodes()``           | Print the node ID ranges and model names of         |
+| ``nest.PrintNodes()``           | Print the node ID ranges and |model| names of         |
 |                                 | the nodes in the network.                           |
 +---------------------------------+-----------------------------------------------------+
 | ``nest.GetConnections()``       | Retrieve connections (all or for a given            |

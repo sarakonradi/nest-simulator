@@ -52,13 +52,13 @@ respect to the next point on the time grid. This grid point marks the
 spike's time stamp. The neuron then emits the spike and resets its
 membrane potential.
 
-Models with precise spike times in NEST
+|Models| with precise spike times in NEST
 ---------------------------------------
 
 ``poisson_generator_ps`` creates Poissonian spike trains, where spike
 times have an integer time stamp and a double precision offset. It is
 hence dedicated to simulations with precise spike times. The device can
-also be connected to grid-constrained neuron models, which only use the
+also be connected to grid-constrained neuron |models|, which only use the
 time stamps of the spikes and ignore their offsets. However, spike
 generation with ``poisson_generator_ps`` is less efficient than with its
 grid-constrained counterpart ``poisson_generator``.
@@ -67,33 +67,33 @@ grid-constrained counterpart ``poisson_generator``.
 grid-constrained counterpart ``parrot_neuron``, but it is able to
 represent precise spike times.
 
-``iaf_psc_delta_ps`` is an integrate-and-fire neuron model with
+``iaf_psc_delta_ps`` is an integrate-and-fire neuron |model| with
 delta-shaped post-synaptic currents that employs precise spike times;
-its grid-constrained counterpart is ``iaf_psc_delta``. In this model the
+its grid-constrained counterpart is ``iaf_psc_delta``. In this |model| the
 precise location of an outgoing spike is determined analytically.
 
 ``iaf_psc_alpha_ps`` is an
-integrate-and-fire neuron model with alpha-shaped post-synaptic
+integrate-and-fire neuron |model| with alpha-shaped post-synaptic
 current that employ precise spike times; The grid-constrained
-counterpart is ``iaf_psc_alpha``. The neuron models have been developed
+counterpart is ``iaf_psc_alpha``. The neuron |models| have been developed
 in the context of `Morrison et al.
-(2007) <http://dx.doi.org/10.1162/neco.2007.19.1.47>`__. As the model
+(2007) <http://dx.doi.org/10.1162/neco.2007.19.1.47>`__. As the |model|
 employ interpolation in order to determine the precise location of an
 outgoing spike, the achieved precision depends on the simulation
-resolution *h*. The models differ in the way they process incoming
+resolution *h*. The |models| differ in the way they process incoming
 spikes, which also affects the attained precision (see `Morrison et al.
 (2007) <http://dx.doi.org/10.1162/neco.2007.19.1.47>`__ for details).
 
-``iaf_psc_exp_ps`` is an integrate-and-fire neuron model with
+``iaf_psc_exp_ps`` is an integrate-and-fire neuron |model| with
 exponentially shaped post-synaptic currents that employs precise spike
 times; its grid-constrained counterpart is ``iaf_psc_exp``. It has been
 developed in the context of `Hanuschkin et al.
 (2010) <http://dx.doi.org/10.3389/fninf.2010.00113>`__, which is a
 continuation of the work presented in `Morrison et al.
 (2007) <http://dx.doi.org/10.1162/neco.2007.19.1.47>`__. As the neuron
-model employs an iterative search in order to determine the precise
+|model| employs an iterative search in order to determine the precise
 location of an outgoing spike, the achieved precision does not depend on
-the simulation resolution h. The model can also be used through the
+the simulation resolution h. The |model| can also be used through the
 `PyNN
 interface <http://neuralensemble.org/trac/PyNN/wiki/ContinuousTimeSpiking>`__.
 

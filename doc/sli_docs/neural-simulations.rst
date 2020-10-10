@@ -31,7 +31,7 @@ one neuron:
 
 We are going to simulate a standard integrate and fire model with
 resting potential at -70 mV and spike threshold at -55 mV. In this line,
-we use the model ``iaf_psc_alpha`` to create a neuron. The command
+we use the |model| ``iaf_psc_alpha`` to create a neuron. The command
 ``Create`` returns a handle to the created neuron, which we store in the
 variable ``neuron``.
 
@@ -163,7 +163,7 @@ milliseconds. Below, you see a transcript of the simulation:
 
 After some initial messages from the simulation scheduler, we see the
 output from the voltmeter. The number in the left column represents the
-node ID of the model neuron and the center column the network
+node ID of the |model| neuron and the center column the network
 time in milliseconds. The right column contains the values of the
 membrane potential at that time. The potential is given in mV.
 
@@ -187,7 +187,7 @@ and clamped to the resting value for 2 ms, the refractory period of the
 neuron. After the refractory period, the membrane continues to
 depolarize due to the continuing input current.
 
-Nodes and Models
+Nodes and |Models|
 ----------------
 
 In NEST, the neural system is a collection of nodes and their
@@ -195,16 +195,16 @@ interactions. Nodes correspond to things like neurons, synapses, and
 devices, and are implemented in C++. The network and its configuration
 are defined at the level of the simulation language interpreter.
 
-Nodes are created from a set of prescribed models which are stored in
-the dictionary ``modeldict``. The most important neuron models are:
+Nodes are created from a set of prescribed |models| which are stored in
+the dictionary ``|model|dict``. The most important neuron |models| are:
 
 Model name Description ``iaf_psc_alpha`` Simple integrate-and-fire
 neuron with alpha-function PSCs. ``iaf_psc_delta`` Integrate-and-fire
 neuron with delta-function PSCs. ``iaf_cond_alpha`` Conductance-based
 integrate-and-fire neuron with alpha-function synapses. ``iaf_cond_exp``
 Conductance-based integrate-and-fire neuron with exp-function synapses.
-``hh_psc_alpha`` ``hh_cond_exp_traub`` In order to make the models
-visible to the interpreter, the model dictionary has to be opened.
+``hh_psc_alpha`` ``hh_cond_exp_traub`` In order to make the |models|
+visible to the interpreter, the |model| dictionary has to be opened.
 
 Creating nodes
 ~~~~~~~~~~~~~~
@@ -216,16 +216,16 @@ that we have created before.
 
    SLI ] ResetKernel
    Sep 21 10:13:39 Network::clear_models [Info]:
-    Models will be cleared and parameters reset.
+    |Models| will be cleared and parameters reset.
 
-Nodes are created from a model, using the command ``Create``.
+Nodes are created from a |model|, using the command ``Create``.
 
 ::
 
    SLI ] /iaf_psc_alpha Create ==
    1
 
-In the fist line, we create one integrate and fire neuron from the model
+In the fist line, we create one integrate and fire neuron from the |model|
 ``iaf_psc_alpha``.
 
 The return value of ``Create`` is an integer that identifies the last
@@ -316,8 +316,8 @@ expected type:
        Expected datatype: doubletype
        Provided datatype: stringtype
 
-In order to find out, which properties of a given model can be changed
-an which not, you have to refer to the model’s documentation.
+In order to find out, which properties of a given |model| can be changed
+an which not, you have to refer to the |model|’s documentation.
 
 Connections
 -----------
@@ -479,7 +479,7 @@ stored in memory can be retrieved after the simulation using
 
    SLI ] GetKernelStatus /recording_backends get keys ==
 
-Device models are also stored in the dictionary ``modeldict``. The most
+Device |models| are also stored in the dictionary ``modeldict``. The most
 important devices are:
 
 * ``voltmeter`` Device to observe membrane potentials.

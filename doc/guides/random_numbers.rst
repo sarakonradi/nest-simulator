@@ -402,7 +402,7 @@ The first line generates \\([N\_{vp}\\) properly seeded NumPy RNGs as
 discussed above. The next line creates 10 nodes, while the third line
 extracts status information about each node. For local nodes, this will
 be full information, for non-local nodes we only get the following
-fields: ``local``, ``model`` and ``type``. On the fourth line, we create
+fields: ``local``, ``|model|`` and ``type``. On the fourth line, we create
 a list of tuples, containing global ID and virtual process number for
 all local neurons. The for loop then sets the membrane potential of each
 local neuron drawn from a uniform distribution on \\([-70, -50]\\) using
@@ -423,7 +423,7 @@ connection weights:
         weights = pyrngs[tgt_vp].uniform(0.5, 1.5, C_E)
         nest.RandomConvergentConnect(nodes, [tgt_node_id], C_E,
                                      weight=list(weights), delay=2.0,
-                                     model="excitatory")
+                                     |model|="excitatory")
 
 Here we loop over all local nodes considered as target nodes. For each
 target, we create an array of \\(C\_E\\) randomly chosen weights,
@@ -446,7 +446,7 @@ You can check the weights selected by
 
 which will print a list containing a triple of source node ID, target node ID
 and weight for each connection in the network. If you want to see only a
-subset of connections, pass source, target, or synapse model to
+subset of connections, pass source, target, or synapse |model| to
 ``GetConnections()``.
 
 Randomizing divergent connections
@@ -464,10 +464,10 @@ above.
 ::
 
     nest.CopyModel('static_synapse', 'inhibitory', {'weight': 0.0, 'delay': 3.0})
-    nest.RandomDivergentConnect(nodes, nodes, C_E, model='inhibitory')
+    nest.RandomDivergentConnect(nodes, nodes, C_E, |model|='inhibitory')
     node_id_vp_map = dict(local_nodes)
     for src in nodes:
-        conns = nest.GetConnections(source=[src], synapse_model='inhibitory')
+        conns = nest.GetConnections(source=[src], synapse_|model|='inhibitory')
         tgts = [conn[1] for conn in conns]
         rweights = [{'weight': pyrngs[node_id_vp_map[tgt]].uniform(-2.5, -0.5)}
                    for tgt in tgts]

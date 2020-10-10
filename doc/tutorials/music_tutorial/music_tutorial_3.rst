@@ -10,7 +10,7 @@ complicated API, so you can easily use it for your own applications that
 connect to a MUSIC-enabled simulation.
 
 Let’s take a look at a pair of programs that send and receive spikes.
-These can be used as inputs or outputs to the NEST models we created
+These can be used as inputs or outputs to the NEST |models| we created
 above with no change to the code. C++ code tends to be somewhat
 longwinded so we only show the relevant parts here. The C++ interface is
 divided into a setup phase and a runtime phase. You can see the setup below. 
@@ -383,7 +383,7 @@ than one channel recorded per output file, just as the channel
 allocation code specified. If you have more MPI processes than input
 channels, some output files will be empty.
 
-You can connect these with the NEST models that we wrote earlier. Copy
+You can connect these with the NEST |models| that we wrote earlier. Copy
 them into the same directory. Then, in the ``cpp.music``
 config file, change the ``binary`` parameter in
 ``[from]`` from ``binary=./send`` to

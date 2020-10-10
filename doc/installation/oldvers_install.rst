@@ -43,8 +43,8 @@ if want to use GNU readline with NEST. GNU readline itself depends on
 systems). Again, the development packages are needed to compile NEST.
 
 The `GNU Scientific Library <http://www.gnu.org/software/gsl/>`_ is needed by
-several neuron models, in particular those with conductance based synapses. If
-you want these models, please install the GNU Scientific Library along with its
+several neuron |models|, in particular those with conductance based synapses. If
+you want these |models|, please install the GNU Scientific Library along with its
 development packages. We strongly recommend that you install/update to GNU
 Scientific Library v1.11 or later.
 
@@ -69,7 +69,7 @@ Minimal configuration
 
 NEST can be compiled without any external packages; such configuration may be
 useful e.g. for initial porting to a new supercomputer. However, this implies
-several restrictions: First, some neuron and synapse models will not be
+several restrictions: First, some neuron and synapse |models| will not be
 available, as they depend on ODE solvers from the GNU scientific library.
 Second, the Python extension will not be available, and third, multi-threading
 and parallel computing facilities will be disabled.

@@ -59,7 +59,7 @@ A NEST network consists of three types of elements: neurons, devices,
 and connections between them.
 
 Neurons are the basic building blocks, and in NEST they are generally
-spiking point neuron models. Devices are supporting units that for
+spiking point neuron |models|. Devices are supporting units that for
 instance generate inputs to neurons or record data from them. The
 Poisson spike generator, the spike recorder recording device, and the
 MUSIC input and output proxies are all devices. Neurons and devices are
@@ -70,7 +70,7 @@ neuron can get multiple input connections from any number of other
 neurons. Neuron connections typically carry spike events, but other
 kinds of events, such as voltages and currents, are also available for
 recording devices. Synapses are not independent nodes, but are part of
-the connection. Synapse models will typically modify the weight or
+the connection. Synapse |models| will typically modify the weight or
 timing of the spike sent on to the neuron. All connections have a
 synapse, by default the ``static_synapse``.
 
@@ -93,8 +93,8 @@ ultimately up to the receiving node. In :numref:`neuronpic` A, neuron
 connection with weight :math:`w_a` and delay :math:`d`. The spike is
 sent through the synapse, then buffered on the receiving side until
 :math:`t+d` (:numref:`neuronpic` B). At that time it’s handed over to the
-neuron model receptor that converts the spike event to a current and
-applies it to the neuron model (:numref:`neuronpic` C).
+neuron |model| receptor that converts the spike event to a current and
+applies it to the neuron |model| (:numref:`neuronpic` C).
 
 
 Adding MUSIC connections
@@ -110,7 +110,7 @@ Each MUSIC port can carry multiple numbered *channels*. The channel is
 the smallest unit of transmission, in that you can distinguish data
 flowing in different channels, but not within a single channel.
 Depending on the application a port may have one or many channels, and a
-single channel can carry the events from one single neuron model or the
+single channel can carry the events from one single neuron |model| or the
 aggregate output of many neurons.
 
 .. _neuronmusic1:
@@ -132,11 +132,11 @@ output proxy :math:`P_a` on one end, and input proxy :math:`P_b` on the
 other.
 
 As we mentioned above, MUSIC proxies are devices, not regular neuron
-models. Like most devices, proxies ignore weight and delay parameters on
+|models|. Like most devices, proxies ignore weight and delay parameters on
 incoming connections. Any delay applied to the connection from
 :math:`N_a` to the output proxy :math:`P_a` is thus silently ignored.
 MUSIC makes the inter-simulation transmission delays invisible to the
-models themselves, so the connection from :math:`P_a` to :math:`P_b` is
+|models| themselves, so the connection from :math:`P_a` to :math:`P_b` is
 effectively zero. The total delay and weight of the connection from
 :math:`N_a` to :math:`N_b` is thus that set on the :math:`P_b` to
 :math:`N_b` connection.
@@ -150,7 +150,7 @@ effectively zero. The total delay and weight of the connection from
    A MUSIC connection with two outputs and two inputs. A single output
    proxy sends two channels of data to an input event handler that
    divides the channels to the two input proxies. They connect the
-   recipient neuron models.
+   recipient neuron |models|.
 
 When we have multiple channels, the structure looks something like in
 :numref:`neuronmusic3`. Now we have two neurons :math:`N_{a1}` and

@@ -9,8 +9,8 @@ In this section we look at creating and parameterising batches of
 material, you will know how to:
 
 -  create populations of neurons with specific parameters
--  set model parameters before creation
--  define models with customised parameters
+-  set |model| parameters before creation
+-  define |models| with customised parameters
 -  randomise parameters after creation
 -  make random connections between populations
 -  set up devices to start, stop and save data to file
@@ -35,7 +35,7 @@ Creating parameterised populations of nodes
 -------------------------------------------
 
 In the previous section, we introduced the function
-``Create(model, n=1, params=None)``. Its mandatory argument is the model
+``Create(model, n=1, params=None)``. Its mandatory argument is the |model|
 name, which determines what type the nodes to be created should be. Its
 two optional arguments are ``n``, which gives the number of nodes to be
 created (default: 1) and ``params``, which is a dictionary giving the
@@ -54,12 +54,12 @@ neurons.
 Parameterising the neurons at creation is more efficient than using
 ``SetStatus()`` after creation, so try to do this wherever possible.
 
-We can also set the parameters of a neuron model *before* creation,
+We can also set the parameters of a neuron |model| *before* creation,
 which allows us to define a simulation more concisely in many cases. If
 many individual batches of neurons are to be produced, it is more
-convenient to set the defaults of the model, so that all neurons created
-from that model will automatically have the same parameters. The
-defaults of a model can be queried with ``GetDefaults(model)``, and set
+convenient to set the defaults of the |model|, so that all neurons created
+from that |model| will automatically have the same parameters. The
+defaults of a |model| can be queried with ``GetDefaults(model)``, and set
 with ``SetDefaults(model, params)``, where ``params`` is a dictionary
 containing the desired parameter/value pairings. For example:
 
@@ -72,15 +72,15 @@ containing the desired parameter/value pairings. For example:
     neuronpop3 = nest.Create("iaf_psc_alpha", 100)
 
 The three populations are now identically parameterised with the usual
-model default values for all parameters except ``I_e`` and ``tau_m``,
+|model| default values for all parameters except ``I_e`` and ``tau_m``,
 which have the values specified in the dictionary ``ndict``.
 
-If batches of neurons should be of the same model but using different
+If batches of neurons should be of the same |model| but using different
 parameters, it is handy to use ``CopyModel(existing, new, params=None)``
-to make a customised version of a neuron model with its own default
+to make a customised version of a neuron |model| with its own default
 parameters. This function is an effective tool to help you write clearer
-simulation scripts, as you can use the name of the model to indicate
-what role it plays in the simulation. Set up your customised model in
+simulation scripts, as you can use the name of the |model| to indicate
+what role it plays in the simulation. Set up your customised |model| in
 two steps using ``SetDefaults()``:
 
 ::
@@ -96,7 +96,7 @@ or in one step:
     idict = {"I_e": 300.0}
     nest.CopyModel("iaf_psc_alpha", "inh_iaf_psc_alpha", params=idict)
 
-Either way, the newly defined models can now be used to generate neuron
+Either way, the newly defined |models| can now be used to generate neuron
 populations and will also be returned by the function ``Models()``.
 
 ::
@@ -313,7 +313,7 @@ are developing a script, then you may need to run it from the
 ``ipython`` console multiple times before you are happy with its
 behaviour. In this case, it is useful to use the function
 ``ResetKernel()``. This gets rid of all nodes you have created, any
-customised models you created, and resets the internal clock to 0.
+customised |models| you created, and resets the internal clock to 0.
 
 The other main use of resetting is when you need to run a simulation in
 a loop, for example to test different parameter settings. In this case
@@ -355,7 +355,7 @@ Models
 
 -  ``CopyModel(existing, new, params=None)``
 
-   Create a ``new`` model by copying an ``existing`` one. Default
+   Create a ``new`` |model| by copying an ``existing`` one. Default
    parameters can be given as ``params``, or else are taken from
    ``existing``.
 
@@ -365,6 +365,6 @@ Simulation control
 -  ``ResetKernel()``
 
    Reset the simulation kernel. This will destroy the network as well as
-   all custom models created with ``CopyModel()``. The parameters of
-   built-in models are reset to their defaults. Calling this function is
+   all custom |models| created with ``CopyModel()``. The parameters of
+   built-in |models| are reset to their defaults. Calling this function is
    equivalent to restarting NEST.

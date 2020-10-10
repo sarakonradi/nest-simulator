@@ -14,7 +14,7 @@ To build NEST, you need a recent version of `CMake <https://cmake.org/install>`_
 
 The `GNU readline library <http://www.gnu.org/software/readline/>`_ is recommended if you use NEST interactively **without Python**. Although most Linux distributions have GNU readline installed, you still need to install its development package if want to use GNU readline with NEST. GNU readline itself depends on `libncurses <http://www.gnu.org/software/ncurses/>`_ (or libtermcap on older systems). Again, the development packages are needed to compile NEST.
 
-The `GNU Scientific Library <http://www.gnu.org/software/gsl/>`_ is needed by several neuron models, in particular those with conductance based synapses. If you want these models, please install the GNU Scientific Library along with its development packages.
+The `GNU Scientific Library <http://www.gnu.org/software/gsl/>`_ is needed by several neuron |models|, in particular those with conductance based synapses. If you want these |models|, please install the GNU Scientific Library along with its development packages.
 
 For efficient sorting algorithms the Boost library <https://www.boost.org/> is used. Since this is an essential factor for the communication of spikes, some simulations are significantly faster when NEST is compile with Boost.
 If you want to use PyNEST, we recommend to install the following along with their development packages:

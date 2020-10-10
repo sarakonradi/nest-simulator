@@ -1,22 +1,22 @@
-Integrating neural models using exact integration 
+Integrating neural |models| using exact integration 
 =================================================
 
-The simple integrate-and fire model
+The simple integrate-and fire |model|
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For the simple integrate-and-fire model the voltage :math:`V` is given as a solution of the equation:
+For the simple integrate-and-fire |model| the voltage :math:`V` is given as a solution of the equation:
 
 .. math::
     C\frac{dV}{dt}=I.
 
 This is just the derivate of the law of capacitance :math:`Q=CV`. When an input current is applied, the membrane voltage increases with time until it reaches a constant threshold :math:`V_{\text{th}}`, at which point a delta function spike occurs.
 
-A shortcoming of the simple integrate-and-fire model is that it implements no time-dependent memory. If the model receives a below-threshold signal at some time, it will retain that voltage boost until it fires again. This characteristic is not in line with observed neuronal behavior.
+A shortcoming of the simple integrate-and-fire |model| is that it implements no time-dependent memory. If the |model| receives a below-threshold signal at some time, it will retain that voltage boost until it fires again. This characteristic is not in line with observed neuronal behavior.
 
-The leaky integrate-and fire model
+The leaky integrate-and fire |model|
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the leaky integrate-and-fire model, the memory problem is solved by adding a "leak" term :math:`\frac{-1}{R}V` (:math:`R` is the resistance and :math:`\tau=RC`) to the membrane potential:
+In the leaky integrate-and-fire |model|, the memory problem is solved by adding a "leak" term :math:`\frac{-1}{R}V` (:math:`R` is the resistance and :math:`\tau=RC`) to the membrane potential:
 
 .. math::
     \frac{dV}{dt}=\frac{-1}{\tau}V+\frac{1}{C}I.
@@ -112,7 +112,7 @@ and
 
 This means that once we have calculated :math:`A`, propagation consists of multiplications only.
 
-Example: The leaky integrate and fire model with alpha-function shaped inputs (iaf_psc_alpha)
+Example: The leaky integrate and fire |model| with alpha-function shaped inputs (iaf_psc_alpha)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The dynamics of the membrane potential :math:`V` is given by:
@@ -134,7 +134,7 @@ The total input :math:`I` to the neuron at a certain time :math:`t` is the sum o
 
 :math:`S_t` is the set of indices that deliver a spike to the neuron at time :math:`t`, :math:`\tau_{\text{syn}}` is the rise time and :math:`\iota_k` represents the "weight" of synapse :math:`k`.
 
-Exact integration for the iaf_psc_alpha model
+Exact integration for the iaf_psc_alpha |model|
 ---------------------------------------------
 
 First we make the substitutions:
@@ -179,7 +179,7 @@ where
 
 as the linearity of the system permits the initial conditions for all spikes arriving at a given grid point to be lumped together in the term :math:`x_{t+h}`. :math:`S_{t+h}` is the set of indices :math:`k\in 1,....,K` of synapses that deliver a spike to the neuron at time :math:`t+h`.
 
-The matrix :math:`e^{Ah}` in the C++ implementation of the model in NEST is constructed `here <https://github.com/nest/nest-simulator/blob/b3fc263e073f46f0732c10efb34fcc90f3b6771c/models/iaf_psc_alpha.cpp#L243>`_.
+The matrix :math:`e^{Ah}` in the C++ implementation of the |model| in NEST is constructed `here <https://github.com/nest/nest-simulator/blob/b3fc263e073f46f0732c10efb34fcc90f3b6771c/models/iaf_psc_alpha.cpp#L243>`_.
 
 Every matrix entry is calculated twice. For inhibitory post synaptic inputs (with a time constant :math:`\tau_{syn_{in}}`) and excitatory post synaptic inputs (with a time constant :math:`\tau_{syn_{ex}}`).
 

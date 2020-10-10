@@ -296,7 +296,7 @@ Functions related to simulation
 +-------------------------+--------------------------------------------+
 
 
-Functions related to models
+Functions related to |models|
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 No Change

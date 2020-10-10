@@ -7,7 +7,7 @@ Here is a list of functions for the PyNEST interface.
    :local:
 
 
-Functions related to models
+Functions related to |models|
 -------------------------------
 
 .. automodule:: nest.lib.hl_api_models

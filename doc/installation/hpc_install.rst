@@ -6,7 +6,7 @@ Minimal configuration
 
 NEST can be compiled without any external packages; such a configuration may be useful for initial porting to a new supercomputer. However, this implies several restrictions: 
 
-- Some neuron and synapse models will not be available, as they depend on ODE solvers from the GNU Scientific Library.
+- Some neuron and synapse |models| will not be available, as they depend on ODE solvers from the GNU Scientific Library.
 - The Python extension will not be available
 - Multi-threading and parallel computing facilities will be disabled.
 
@@ -173,7 +173,7 @@ On the K Computer:
 
   The compilation can take quite some time compiling the file ``models/modelsmodule.cpp``
   due to generation of many template classes. To speed up the process, you can
-  comment out all synapse models you do not need.
+  comment out all synapse |models| you do not need.
   The option ``-Kfast`` on the K computer enables many different options::
 
         -O3 -Kdalign,eval,fast_matmul,fp_contract,fp_relaxed,ilfunc,lib,mfunc,ns,omitfp,prefetch_conditional,rdconv -x-

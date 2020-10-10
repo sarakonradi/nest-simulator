@@ -64,7 +64,7 @@ Common recorder properties
 --------------------------
 
 All recorders have a set of common properties that can be set using
-``SetDefaults`` on the model class or ``SetStatus`` on a device
+``SetDefaults`` on the |model| class or ``SetStatus`` on a device
 instance:
 
 .. glossary::
@@ -122,7 +122,7 @@ display it on the terminal, or write it to files.
 To specify the recording backend for a given recording device, the
 property ``record_to`` of the latter has to be set to the name of the
 recording backend to be used. This can either happen already in the
-call to ``Create`` or by using ``SetStatus`` on the model instance.
+call to ``Create`` or by using ``SetStatus`` on the |model| instance.
 
 
 ::
@@ -136,7 +136,7 @@ of data by the user after simulation.
 
 Each recording backend may provide a specific set of parameters
 (explained in the backend documentation below) that will be included
-in the model status dictionary once the backend is set. This means
+in the |model| status dictionary once the backend is set. This means
 that these parameters can only be reviewed and changed *after* the
 backend has been selected. In particular, recording-device specific
 per-device parameters cannot be set using ``SetDefaults``, but must

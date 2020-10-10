@@ -30,7 +30,7 @@ Import required packages:
    import nest.voltage_trace
    nest.ResetKernel()
 
-Create the neuron models you want to simulate:
+Create the neuron |models| you want to simulate:
 
 .. code-block:: python
 

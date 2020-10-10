@@ -6,7 +6,7 @@ language loosely modelled on PostScript. It is quite cumbersome to work
 with, is not extensively documented, and has quite a few corner cases,
 design issues and unintended behaviours. But it is small, already built
 into NEST and is much more memory efficient than using Python. If your
-models are very large and memory is tight, or you are using a system
+|models| are very large and memory is tight, or you are using a system
 where Python isn’t available, then SLI is the way to go.
 
 We won’t discuss the code extensively as learning SLI is really outside
@@ -115,7 +115,7 @@ run with nest, and pass the correct files as arguments:
 
 For more information on using SLI, the browser based help we mentioned
 in the introduction is quite helpful, but the best resource is the set
-of example models in the NEST source code distribution. That will show
+of example |models| in the NEST source code distribution. That will show
 you many useful idioms and typical ways to accomplish common tasks.
 
 .. note::

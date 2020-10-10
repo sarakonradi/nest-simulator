@@ -143,10 +143,10 @@ Spikes between neurons and devices
   replica of the device. In this case, both the pre- and postsynaptic nodes are
   handled by the virtual process to which the neuron is assigned.
 
-Synaptic plasticity models
+Synaptic plasticity |models|
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For synapse models supporting plasticity, synapse dynamics in the
+For synapse |models| supporting plasticity, synapse dynamics in the
 ``Connection`` object are always handled by the virtual process of the
 `target node`.
 

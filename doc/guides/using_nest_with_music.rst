@@ -78,7 +78,7 @@ continuing.
    nest.set_verbosity("M_ERROR")
 
 Next we create a ``spike_generator`` and set the spike times. We then create
-our neuron model (``iaf_psc_alpha``) and connect the neuron with the spike
+our neuron |model| (``iaf_psc_alpha``) and connect the neuron with the spike
 generator.
 
 ::

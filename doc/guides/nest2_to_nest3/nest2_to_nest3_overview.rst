@@ -153,7 +153,7 @@ Composing
     >>>  print(nrns + nrns_2)
          NodeCollection(metadata=None, model=iaf_psc_alpha, size=13, first=1, last=13)
 
-    If the node IDs are not continuous or the models are different, a composite will be created:
+    If the node IDs are not continuous or the |models| are different, a composite will be created:
 
     >>>  nrns_3 = nest.Create('iaf_psc_delta', 3)
     >>>  print(nrns + nrns_3)
@@ -1048,7 +1048,7 @@ Consistently use term synapse_model throughout:
 
 Use allow_offgrid_times throughout:
     In the model ``spike_generator``, the parameter ``allow_offgrid_spikes`` is renamed
-    ``allow_offgrid_times`` for consistency with other models.
+    ``allow_offgrid_times`` for consistency with other |models|.
 
 Use unit ms instead of number of simulation steps:
     The ``structural_plasticity_update_interval`` now has the unit ms instead of
@@ -1456,10 +1456,10 @@ prints ID ranges and model names of the nodes in the network.
 
 .. model_rm::
 
-Models
+|Models|
 ~~~~~~
 
-With NEST 3.0, some models have been removed. They all have alternative models that can
+With NEST 3.0, some |models| have been removed. They all have alternative |models| that can
 be used instead.
 
   +----------------------------------------------+-----------------------------------------------+

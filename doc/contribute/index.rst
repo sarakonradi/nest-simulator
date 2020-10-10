@@ -2,7 +2,7 @@ Contributing to NEST
 ====================
 
 NEST draws its strength from the many people that use and improve it. We
-are happy to consider your contributions (e.g., new models, bug or
+are happy to consider your contributions (e.g., new |models|, bug or
 documentation fixes) for addition to the official version of NEST.
 
 Please familiarize yourself with our:

@@ -37,7 +37,7 @@ Getting help on the command line interface
 Model Information
 -----------------
 
-* To get a complete list of the models available in NEST type:
+* To get a complete list of the |models| available in NEST type:
 
     .. code-block:: python
 
@@ -55,7 +55,7 @@ Model Information
 
        nest.Models(mtype='synapses', sel=None)
 
-* To get details on model parameters and usage use:
+* To get details on |model| parameters and usage use:
 
     .. code-block:: python
 
