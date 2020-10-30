@@ -152,8 +152,8 @@ This allows you to preview your work on your Read the Docs account. In order
 to see the changes on the official NEST simulator documentation, please submit
 a pull request.
 
-Creating pull request
-+++++++++++++++++++++
+Creating a pull request
++++++++++++++++++++++++
 
 Once your documentation work is finished, you can create a `pull request
 <https://nest.github.io/nest-simulator/development_workflow#create-a-pull-
